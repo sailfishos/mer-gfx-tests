@@ -1,0 +1,33 @@
+From 06fe8f63a2bbd1dc77cfd6524bc1ab0fdf9abcf8 Mon Sep 17 00:00:00 2001
+From: David Greaves <david@dgreaves.com>
+Date: Fri, 27 Jan 2012 14:19:53 +0000
+Subject: [PATCH] Include missing header and use native window type
+
+---
+ glestest.cc |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+diff --git a/glestest.cc b/glestest.cc
+index ef872b4..2092150 100644
+--- a/glestest.cc
++++ b/glestest.cc
+@@ -5,6 +5,7 @@
+  *
+  * compile with:   g++  -lX11 -lEGL -lGLESv2  egl-example.cpp
+  */
++#include <cstdlib>
+ 
+ #include  <iostream>
+ using namespace std;
+@@ -245,7 +246,7 @@ int  main()
+       return 1;
+    }
+ 
+-   egl_surface = eglCreateWindowSurface ( egl_display, ecfg, (void*)win, NULL );
++   egl_surface = eglCreateWindowSurface ( egl_display, ecfg, win, NULL );
+    if ( egl_surface == EGL_NO_SURFACE ) {
+       cerr << "Unable to create EGL surface (eglError: " << eglGetError() << ")" << endl;
+       return 1;
+-- 
+1.7.6.3
+

@@ -1,0 +1,20 @@
+Name: mer-gfx-tests
+Summary: Mer Graphics Tests
+Description: Test and debug for EGL
+Version: 0.0.1
+Release: 1
+Group: Development/Tools
+License: GPL
+URL: http://gitweb.merproject.org/gitweb?p=mer-core/mer-gfx-tests.git;a=summary
+Sources:
+    - mer-gfx-tests-0.0.1.tar.gz
+Patches:
+    - 0001-Include-missing-header-and-use-native-window-type.patch
+PkgConfigBR:
+    - egl
+    - glesv2
+Configure: none
+
+Files:
+    - "%{_bindir}/eglinfo"
+    - "%{_bindir}/glestest"

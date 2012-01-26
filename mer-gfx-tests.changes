@@ -1,0 +1,7 @@
+* Thu Jan 26 2012 david@dgreaves.com - 0.0.1-1
+- Initial packaging of eglinfo and glestest
+   http://www.cl.cam.ac.uk/~cs448/git/trunk/src/progs/egl/
+  and
+   http://www.daimi.au.dk/~cvm/glestest.cc
+- Create Makefile and minor build changes to glestest
+- Closes MER#84 : Package eglinfo and glestest for easy EGL testing
